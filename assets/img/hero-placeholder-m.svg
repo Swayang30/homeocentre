@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 506" preserveAspectRatio="xMidYMid slice">
+  <!-- PLACEHOLDER — CLIENT TO SUPPLY mobile hero artwork (900×675 recommended; shown 16:9 here) -->
+  <circle cx="450" cy="270" r="220" fill="#FFFFFF" fill-opacity=".55"/>
+  <g transform="translate(330 70) scale(.82)">
+    <path d="M120 0h100v52l26 36c10 14 16 31 16 49v262c0 22-18 40-40 40H118c-22 0-40-18-40-40V137c0-18 6-35 16-49l26-36z" fill="#B8742A" fill-opacity=".9"/>
+    <rect x="112" y="-38" width="116" height="52" rx="12" fill="#0E5A43"/>
+    <rect x="96" y="190" width="150" height="128" rx="10" fill="#FFFFFF"/>
+    <rect x="96" y="190" width="150" height="20" fill="#0E5A43"/>
+    <rect x="118" y="236" width="106" height="10" rx="5" fill="#0E5A43" fill-opacity=".55"/>
+    <rect x="118" y="260" width="78" height="10" rx="5" fill="#0E5A43" fill-opacity=".3"/>
+  </g>
+  <g fill="#0E5A43" fill-opacity=".8">
+    <path d="M560 440c-8-74 34-140 108-156 5 76-33 136-108 156z"/>
+    <path d="M300 445c-58-33-82-90-66-148 58 28 86 86 66 148z" fill-opacity=".55"/>
+  </g>
+</svg>

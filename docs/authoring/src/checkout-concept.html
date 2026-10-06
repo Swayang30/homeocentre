@@ -1,0 +1,79 @@
+<!--meta {"title": "Checkout (design concept) — Homoeo Centre", "desc": "Design concept for the future checkout. Not yet functional.", "nav": ""}-->
+<body class="hc">
+<div class="hc-concept" role="note">Design concept &mdash; not yet functional. No order is placed and no payment is taken.</div>
+{{HEADER}}
+
+<main class="hc-main" id="main">
+  <div class="hc-container" data-hc="checkout">
+    <nav class="hc-crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="cart.html">Cart</a></li><li><span aria-current="page">Checkout</span></li></ol></nav>
+    <header class="hc-pagehead"><h1 class="hc-h1">Checkout</h1></header>
+
+    <ol class="hc-steps-bar" data-hc-ck-bar aria-label="Checkout steps">
+      <li>Address</li><li>Delivery</li><li>Payment</li><li>Review</li>
+    </ol>
+
+    <div class="hc-cart">
+      <div>
+        <!-- STEP 1: ADDRESS -->
+        <section class="hc-panel hc-panel--pad" data-hc-ck-step aria-labelledby="ck-addr">
+          <h2 class="hc-h2" id="ck-addr" style="margin-bottom:16px">Delivery address</h2>
+          <div class="hc-form-grid hc-form-grid--2">
+            <div class="hc-field"><label class="hc-label" for="ck-name">Full name</label><input class="hc-input" id="ck-name" name="name" autocomplete="name"></div>
+            <div class="hc-field"><label class="hc-label" for="ck-phone">Mobile number</label><input class="hc-input" id="ck-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national"></div>
+            <div class="hc-field hc-span-2"><label class="hc-label" for="ck-line">Address</label><textarea class="hc-textarea" id="ck-line" name="address" rows="2" autocomplete="street-address"></textarea></div>
+            <div class="hc-field"><label class="hc-label" for="ck-city">City</label><input class="hc-input" id="ck-city" name="city" autocomplete="address-level2" value="Kolkata"></div>
+            <div class="hc-field"><label class="hc-label" for="ck-pin">PIN code</label><input class="hc-input" id="ck-pin" name="pincode" inputmode="numeric" maxlength="6" autocomplete="postal-code" data-hc-pin-input></div>
+          </div>
+          <div class="hc-row" style="margin-top:20px"><button class="hc-btn hc-btn--primary" type="button" data-hc-ck-next>Continue to delivery</button></div>
+        </section>
+
+        <!-- STEP 2: DELIVERY -->
+        <section class="hc-panel hc-panel--pad" data-hc-ck-step aria-labelledby="ck-del" hidden>
+          <h2 class="hc-h2" id="ck-del" style="margin-bottom:16px">Delivery</h2>
+          <div class="hc-rcards" style="--hc-rcard-min:240px" role="radiogroup" aria-labelledby="ck-del">
+            <label class="hc-rcard"><input type="radio" name="delivery" value="standard" checked><span class="hc-rcard__box"><span class="hc-rcard__title">Standard delivery</span><span class="hc-rcard__meta"><span class="hc-confirm">CLIENT TO CONFIRM: charge and time</span></span></span></label>
+            <label class="hc-rcard"><input type="radio" name="delivery" value="pickup"><span class="hc-rcard__box"><span class="hc-rcard__title">Collect from store</span><span class="hc-rcard__meta"><span class="hc-confirm">CLIENT TO CONFIRM: is pickup offered?</span></span></span></label>
+          </div>
+          <p class="hc-alert hc-alert--info" style="margin-top:16px"><svg class="hc-icon" aria-hidden="true"><use href="#i-call"/></svg><span>We call you to confirm the order before dispatch.</span></p>
+          <div class="hc-row" style="margin-top:20px"><button class="hc-btn hc-btn--ghost" type="button" data-hc-ck-back>Back</button><button class="hc-btn hc-btn--primary" type="button" data-hc-ck-next>Continue to payment</button></div>
+        </section>
+
+        <!-- STEP 3: PAYMENT -->
+        <section class="hc-panel hc-panel--pad" data-hc-ck-step aria-labelledby="ck-pay" hidden>
+          <h2 class="hc-h2" id="ck-pay" style="margin-bottom:16px">Payment</h2>
+          <div class="hc-rcards" style="--hc-rcard-min:240px" role="radiogroup" aria-labelledby="ck-pay">
+            <label class="hc-rcard"><input type="radio" name="payment" value="online" checked><span class="hc-rcard__box"><span class="hc-rcard__title">Pay online</span><span class="hc-rcard__meta"><span class="hc-confirm">CLIENT TO CONFIRM: payment gateway</span></span></span></label>
+            <label class="hc-rcard"><input type="radio" name="payment" value="cod"><span class="hc-rcard__box"><span class="hc-rcard__title">Cash on delivery</span><span class="hc-rcard__meta"><span class="hc-confirm">CLIENT TO CONFIRM: is COD offered?</span></span></span></label>
+          </div>
+          <div class="hc-row" style="margin-top:20px"><button class="hc-btn hc-btn--ghost" type="button" data-hc-ck-back>Back</button><button class="hc-btn hc-btn--primary" type="button" data-hc-ck-next>Review order</button></div>
+        </section>
+
+        <!-- STEP 4: REVIEW -->
+        <section class="hc-panel hc-panel--pad" data-hc-ck-step aria-labelledby="ck-rev" hidden>
+          <h2 class="hc-h2" id="ck-rev" style="margin-bottom:16px">Review your order</h2>
+          <dl class="hc-sum">
+            <div class="hc-sum__row"><dt>Deliver to</dt><dd>Kolkata 700001</dd></div>
+            <div class="hc-sum__row"><dt>Delivery</dt><dd>Standard</dd></div>
+            <div class="hc-sum__row"><dt>Payment</dt><dd>Pay online</dd></div>
+          </dl>
+          <div class="hc-row" style="margin-top:20px;flex-wrap:wrap"><button class="hc-btn hc-btn--ghost" type="button" data-hc-ck-back>Back</button><button class="hc-btn hc-btn--accent hc-btn--lg" type="button" aria-disabled="true">Place order (concept)</button></div>
+        </section>
+      </div>
+
+      <aside class="hc-panel hc-panel--pad hc-summary" aria-labelledby="ck-sum">
+        <h2 class="hc-h3" id="ck-sum">Order summary</h2>
+        <dl class="hc-summary__rows">
+          <div><dt>Arnica Montana, 30CH &times; 1</dt><dd>&#8377;175</dd></div>
+          <div><dt>Chelidonium, 200CH &times; 1</dt><dd>&#8377;120</dd></div>
+          <div><dt><span class="hc-badge hc-badge--rx">Rx</span> Chamomilla</dt><dd>On confirmation</dd></div>
+          <div><dt>Shipping</dt><dd>By PIN code</dd></div>
+        </dl>
+        <div class="hc-summary__total"><span>Total</span><strong>&#8377;295</strong></div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+{{FOOTER}}
+</body>
+</html>

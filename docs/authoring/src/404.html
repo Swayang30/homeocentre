@@ -1,0 +1,27 @@
+<!--meta {"title": "Page not found — Homoeo Centre", "desc": "This page could not be found.", "nav": ""}-->
+<body class="hc">
+{{HEADER}}
+
+<main class="hc-main" id="main">
+  <div class="hc-container hc-404">
+    <p class="hc-404__code" aria-hidden="true">404</p>
+    <h1 class="hc-h1">This page isn&rsquo;t on our shelf</h1>
+    <p class="hc-lead">The link may be old or mistyped. Search for the medicine you need, or start from a category.</p>
+    <form class="hc-search" role="search" action="shop.html" data-live-action="shop.php" method="get" data-hc="search">
+      <label class="hc-sr" for="nf-q">Search medicines</label>
+      <input class="hc-search__input" id="nf-q" name="q" type="search" placeholder="Search remedies, e.g. Arnica">
+      <button class="hc-search__btn" type="submit" aria-label="Search"><svg class="hc-icon" aria-hidden="true"><use href="#i-search"/></svg></button>
+    </form>
+    <ul class="hc-chips" style="justify-content:center">
+      <li><a class="hc-chip" href="shop.html?category=3">Dilution</a></li>
+      <li><a class="hc-chip" href="shop.html?category=1">LM Potency</a></li>
+      <li><a class="hc-chip" href="shop.html?category=4">Bach Flower</a></li>
+      <li><a class="hc-chip" href="shop.html?category=5">Pet Segments</a></li>
+    </ul>
+    <div class="hc-row" style="flex-wrap:wrap;justify-content:center"><a class="hc-btn hc-btn--primary" href="index.html">Go to home page</a><a class="hc-btn hc-btn--outline" href="contact.html">Contact us</a></div>
+  </div>
+</main>
+
+{{FOOTER}}
+</body>
+</html>

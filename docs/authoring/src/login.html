@@ -1,0 +1,70 @@
+<!--meta {"title": "Sign in or create an account — Homoeo Centre", "desc": "Sign in to your Homoeo Centre account or create a new one.", "nav": "account"}-->
+<body class="hc">
+{{HEADER}}
+
+<main class="hc-main" id="main">
+  <div class="hc-container">
+    <nav class="hc-crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><span aria-current="page">Account</span></li></ol></nav>
+
+    <div class="hc-auth">
+      <section class="hc-panel hc-panel--pad" data-hc="tabs" aria-label="Account">
+        <div class="hc-tabs__list" role="tablist" style="margin:-4px -4px 8px">
+          <button class="hc-tabs__tab" role="tab" type="button" id="login" aria-controls="panel-login" aria-selected="true">Sign in</button>
+          <button class="hc-tabs__tab" role="tab" type="button" id="register" aria-controls="panel-register" aria-selected="false" tabindex="-1">Create account</button>
+        </div>
+
+        <!-- LOGIN → login.php (POST: email, password, remember) -->
+        <div class="hc-tabs__panel" role="tabpanel" id="panel-login" aria-labelledby="login">
+          <h1 class="hc-h2" style="margin-bottom:6px">Welcome back</h1>
+          <p class="hc-muted" style="margin-bottom:18px">Sign in to see your cart and orders.</p>
+          <!-- IF login_error --><div class="hc-alert hc-alert--error" hidden data-slot="login.error"><svg class="hc-icon" aria-hidden="true"><use href="#i-alert"/></svg><p>Email or password is incorrect.</p></div><!-- END IF -->
+          <form class="hc-form-grid" action="#" data-live-action="login.php" method="post" data-hc="validate" data-success="Prototype: this form posts to login.php on the live site.">
+            <div class="hc-field"><label class="hc-label" for="login-email">Email</label><input class="hc-input" id="login-email" name="email" type="email" autocomplete="email" required data-error="Enter your email address."><p class="hc-error"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p></div>
+            <div class="hc-field"><label class="hc-label" for="login-password">Password</label><input class="hc-input" id="login-password" name="password" type="password" autocomplete="current-password" required data-error="Enter your password."><p class="hc-error"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p></div>
+            <div class="hc-row hc-row--between" style="flex-wrap:wrap">
+              <label class="hc-check"><input type="checkbox" name="remember" value="1"> Keep me signed in</label>
+              <!-- Live link: forgot-password.php (no prototype page; it stays on this page here) -->
+              <a class="hc-small hc-tlink" href="login.html" data-live-href="forgot-password.php">Forgot password?</a>
+            </div>
+            <button class="hc-btn hc-btn--primary hc-btn--lg hc-btn--block" type="submit">Sign in</button>
+            <p class="hc-small hc-muted">New here? <a href="#register" data-hc-tab-link="register">Create an account</a></p>
+          </form>
+        </div>
+
+        <!-- REGISTER → register.php (POST: first_name, last_name, email, phone, password, confirm_password, address, city, state, pincode, country, terms) -->
+        <div class="hc-tabs__panel" role="tabpanel" id="panel-register" aria-labelledby="register" hidden>
+          <h2 class="hc-h2" style="margin-bottom:6px">Create your account</h2>
+          <p class="hc-muted" style="margin-bottom:18px">Save your details for faster reorders.</p>
+          <form class="hc-form-grid hc-form-grid--2" action="#" data-live-action="register.php" method="post" data-hc="validate" data-success="Prototype: this form posts to register.php on the live site.">
+            <div class="hc-field"><label class="hc-label" for="reg-first">First name<span class="hc-req" aria-hidden="true">*</span></label><input class="hc-input" id="reg-first" name="first_name" autocomplete="given-name" required data-error="Enter your first name."><p class="hc-error"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p></div>
+            <div class="hc-field"><label class="hc-label" for="reg-last">Last name</label><input class="hc-input" id="reg-last" name="last_name" autocomplete="family-name"></div>
+            <div class="hc-field"><label class="hc-label" for="reg-email">Email<span class="hc-req" aria-hidden="true">*</span></label><input class="hc-input" id="reg-email" name="email" type="email" autocomplete="email" required data-error="Enter your email address."><p class="hc-error"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p></div>
+            <div class="hc-field"><label class="hc-label" for="reg-phone">Mobile number</label><input class="hc-input" id="reg-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" data-digits="10" data-error-format="Enter a 10-digit mobile number."><p class="hc-error"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p></div>
+            <div class="hc-field"><label class="hc-label" for="reg-pass">Password<span class="hc-req" aria-hidden="true">*</span></label><input class="hc-input" id="reg-pass" name="password" type="password" autocomplete="new-password" required data-error="Choose a password." aria-describedby="reg-pass-hint"><p class="hc-hint" id="reg-pass-hint" data-slot="register.password_rule"><span class="hc-confirm">DEVELOPER TO MATCH LIVE RULE</span></p><p class="hc-error"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p></div>
+            <div class="hc-field"><label class="hc-label" for="reg-pass2">Confirm password<span class="hc-req" aria-hidden="true">*</span></label><input class="hc-input" id="reg-pass2" name="confirm_password" type="password" autocomplete="new-password" required data-match="#reg-pass" data-error="Type the password again."><p class="hc-error"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p></div>
+            <div class="hc-field hc-span-2"><label class="hc-label" for="reg-address">Address</label><textarea class="hc-textarea" id="reg-address" name="address" rows="2" autocomplete="street-address"></textarea></div>
+            <div class="hc-field"><label class="hc-label" for="reg-city">City</label><input class="hc-input" id="reg-city" name="city" autocomplete="address-level2"></div>
+            <div class="hc-field"><label class="hc-label" for="reg-state">State</label><input class="hc-input" id="reg-state" name="state" autocomplete="address-level1" value="West Bengal"></div>
+            <div class="hc-field"><label class="hc-label" for="reg-pin">PIN code</label><input class="hc-input" id="reg-pin" name="pincode" inputmode="numeric" maxlength="6" autocomplete="postal-code" data-digits="6" data-error-format="Enter a 6-digit PIN code." data-hc-pin-input><p class="hc-error"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p></div>
+            <div class="hc-field"><label class="hc-label" for="reg-country">Country</label><input class="hc-input" id="reg-country" name="country" value="India" autocomplete="country-name"></div>
+            <div class="hc-field hc-span-2"><label class="hc-check"><input type="checkbox" name="terms" value="1" required data-error="Please accept the terms to create an account."> <span>I agree to the <a href="terms.html">Terms</a> and <a href="privacy-policy.html">Privacy Policy</a>.</span></label><p class="hc-error"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-alert"/></svg><span></span></p></div>
+            <button class="hc-btn hc-btn--primary hc-btn--lg hc-btn--block hc-span-2" type="submit">Create account</button>
+          </form>
+        </div>
+      </section>
+
+      <aside class="hc-auth__aside" aria-label="Why create an account">
+        <p class="hc-h2">Why create an account</p>
+        <ul class="hc-stack">
+          <li><svg class="hc-icon" aria-hidden="true"><use href="#i-pin"/></svg><span>Save your name, mobile number and delivery address once.</span></li>
+          <li><svg class="hc-icon" aria-hidden="true"><use href="#i-heart"/></svg><span>Keep a wishlist of the remedies you use.</span></li>
+          <li><svg class="hc-icon" aria-hidden="true"><use href="#i-phone"/></svg><span>Need help? Call <a class="hc-tlink" href="tel:+918017371453">+91 8017371453</a>.</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</main>
+
+{{FOOTER}}
+</body>
+</html>

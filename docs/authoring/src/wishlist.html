@@ -1,0 +1,29 @@
+<!--meta {"title": "Wishlist — Homoeo Centre", "desc": "Medicines you saved for later.", "nav": "wishlist"}-->
+<body class="hc">
+{{HEADER}}
+
+<main class="hc-main" id="main">
+  <div class="hc-container">
+    <nav class="hc-crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><span aria-current="page">Wishlist</span></li></ol></nav>
+    <header class="hc-pagehead"><h1 class="hc-h1">Wishlist</h1><p>Saved medicines. Choose a potency when you are ready to order.</p></header>
+
+    <!-- IF wishlist_empty -->
+    <div class="hc-panel hc-empty" id="hc-wish-empty" hidden>
+      <span class="hc-empty__art"><svg class="hc-icon" aria-hidden="true"><use href="#i-heart"/></svg></span>
+      <h2 class="hc-h2">Nothing saved yet</h2>
+      <p>Tap the heart on any medicine to keep it here for your next order.</p>
+      <div class="hc-row"><a class="hc-btn hc-btn--accent" href="shop.html">Shop medicines</a></div>
+    </div>
+    <!-- END IF -->
+
+    <div id="hc-wish-full" style="padding-bottom:32px">
+      <ul class="hc-grid hc-grid--wide">
+{{WISH:arnica-1,chamomilla,causticum}}
+      </ul>
+    </div>
+  </div>
+</main>
+
+{{FOOTER}}
+</body>
+</html>

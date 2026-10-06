@@ -1,0 +1,77 @@
+<!-- BEGIN footer → includes/footer.php -->
+<footer class="hc-footer">
+  <button class="hc-totop" type="button" data-hc="totop">Back to top</button>
+  <div class="hc-container hc-footer__grid">
+    <section class="hc-footer__about" aria-labelledby="hc-f-about">
+      <div class="hc-footer__brand"><img src="assets/img/logo-104.png" width="52" height="52" alt="" loading="lazy"><span>Homoeo Centre</span></div>
+      <h2 class="hc-sr" id="hc-f-about">About the store</h2>
+      <p data-slot="store.about">We provide genuine Homeopathy medicines, Mother Tinctures, Biochemic Tablets, Dilutions, LM Potencies and Healthcare products at affordable prices.</p>
+      <!-- SOCIAL SLOTS: uncomment once the client confirms each account
+      <ul class="hc-row" aria-label="Follow us">
+        <li><a href="#" aria-label="Facebook">…</a></li>
+        <li><a href="#" aria-label="Instagram">…</a></li>
+        <li><a href="#" aria-label="YouTube">…</a></li>
+      </ul>
+      -->
+    </section>
+    <details class="hc-footer__sec" data-hc="respdetails" data-open-min="600">
+      <summary><h2 id="hc-f-shop">Shop</h2><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+      <ul class="hc-footer__links">
+        <li><a href="shop.html">All medicines</a></li>
+        <!-- LOOP categories -->
+        <li><a href="shop.html?category=4">Bach Flower</a></li>
+        <li><a href="shop.html?category=3">Dilution</a></li>
+        <li><a href="shop.html?category=1">LM Potency</a></li>
+        <li><a href="shop.html?category=5">Pet Segments</a></li>
+        <!-- END LOOP -->
+      </ul>
+    </details>
+    <details class="hc-footer__sec" data-hc="respdetails" data-open-min="600">
+      <summary><h2 id="hc-f-help">Help</h2><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+      <ul class="hc-footer__links">
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="shipping.html">Shipping</a></li>
+        <li><a href="refund.html">Refund</a></li>
+        <li><a href="privacy-policy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="login.html">My Account</a></li>
+        <li><a href="index.html#about-store" data-live-href="about.php">About Us</a><!-- prototype: no about page in scope; live link is about.php --></li>
+      </ul>
+    </details>
+    <details class="hc-footer__sec" data-hc="respdetails" data-open-min="600">
+      <summary><h2 id="hc-f-contact">Contact</h2><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+      <ul class="hc-footer__contact">
+        <li><svg class="hc-icon" aria-hidden="true"><use href="#i-pin"/></svg><span data-slot="store.address">Kolkata, West Bengal, India</span></li>
+        <li><svg class="hc-icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+918017371453" data-slot="store.phone">+91 8017371453</a></li>
+        <li><svg class="hc-icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:homeocenter@gmail.com" data-slot="store.email">homeocenter@gmail.com</a></li>
+      </ul>
+    </details>
+  </div>
+  <div class="hc-container">
+    <p class="hc-footer__disclaimer">Information on this site is for general awareness and is not a substitute for advice from a qualified homeopath.</p>
+    <div class="hc-footer__bottom">
+      <p>&copy; <span data-slot="site.year">2026</span> Homoeo Centre, Kolkata. All rights reserved.</p>
+      <ul class="hc-footer__legal">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="shipping.html">Shipping</a></li>
+        <li><a href="refund.html">Refund</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<nav class="hc-tabbar" aria-label="Quick">
+  <a href="index.html"{{C:home}}><svg class="hc-icon" aria-hidden="true"><use href="#i-home"/></svg>Home</a>
+  <a href="shop.html" data-hc-open="hc-drawer" aria-controls="hc-drawer"{{C:shop}}><svg class="hc-icon" aria-hidden="true"><use href="#i-grid"/></svg>Categories</a>
+  <a href="shop.html" data-hc="focussearch"><svg class="hc-icon" aria-hidden="true"><use href="#i-search"/></svg>Search</a>
+  <a href="cart.html"{{C:cart}}><svg class="hc-icon" aria-hidden="true"><use href="#i-cart"/></svg><span class="hc-count" data-slot="cart.count" aria-hidden="true">3</span>Cart</a>
+  <a href="login.html"{{C:account}}><svg class="hc-icon" aria-hidden="true"><use href="#i-user"/></svg>Account</a>
+</nav>
+
+<a class="hc-fab" data-hc="fab" href="tel:+918017371453" aria-label="Call Homoeo Centre on +91 8017371453"><svg class="hc-icon" aria-hidden="true"><use href="#i-call"/></svg><span class="hc-fab__text">Call us</span></a>
+<!-- WHATSAPP SLOT: number not confirmed. When confirmed, uncomment and set the number (country code, no +).
+<a class="hc-fab hc-fab--wa" href="https://wa.me/91XXXXXXXXXX" aria-label="Chat on WhatsApp"><svg class="hc-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg><span class="hc-fab__text">WhatsApp</span></a>
+-->
+<div class="hc-toasts" role="status" aria-live="polite"></div>
+<!-- END footer -->

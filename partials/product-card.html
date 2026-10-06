@@ -1,0 +1,26 @@
+<!-- Product card partial. Default CTA = Choose Potency. Add hc-card--quickadd for single-variant products. -->
+<!-- CANONICAL ITEM -->
+<article class="hc-card" data-product-id="101" data-slot="product.id">
+  <a class="hc-card__media" href="product-details.html?slug=arnica-1" tabindex="-1" aria-hidden="true"><img src="assets/img/product-sample-400.jpg" srcset="assets/img/product-sample-400.jpg 400w, assets/img/product-sample.jpg 600w" sizes="(min-width: 1440px) 17vw, (min-width: 1024px) 22vw, (min-width: 600px) 30vw, 46vw" alt="Arnica Montana" width="400" height="400" loading="lazy" decoding="async" data-hc-fallback data-initial="A" data-slot="product.image"></a>
+  <div class="hc-card__badges">
+    <!-- IF discount >= threshold --><span class="hc-badge hc-badge--off" data-off-wrap hidden><span data-off></span></span><!-- END IF -->
+    
+  </div>
+  <button class="hc-card__wish" type="button" data-hc="wish" data-product-id="101" data-name="Arnica Montana" data-live-href="wishlist.php?id=101" aria-pressed="false" aria-label="Add Arnica Montana to wishlist"><svg class="hc-icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
+  <div class="hc-card__body">
+    <p class="hc-card__cat" data-slot="category.name">Dilution</p>
+    <h3 class="hc-card__name"><a href="product-details.html?slug=arnica-1" data-slot="product.name">Arnica Montana</a></h3>
+    <p class="hc-card__mfr">by <span data-slot="manufacturer.name">Dr. Reckeweg</span></p>
+    <!-- RATING SLOT (reserved, keep hidden until a reviews system exists): <div class="hc-card__rating" data-slot="product.rating" hidden></div> -->
+    <div class="hc-card__price hc-price" data-hc="discount" data-mrp="108" data-price="90">
+      <span class="hc-price__now"><!-- IF variant_count > 1 --><span class="hc-price__from">From</span><!-- END IF --><span class="hc-price__cur">&#8377;</span><span data-slot="variant.min_selling_price">90</span></span>
+      <!-- IF mrp > selling_price --><span class="hc-price__was"><span class="hc-price__mrp"><span class="hc-price__mrp-label">M.R.P: </span><s>&#8377;<span data-slot="variant.mrp">108</span></s></span> <span class="hc-price__off" data-off-wrap hidden>(<span data-off></span>)</span></span><!-- END IF -->
+    </div>
+    <p class="hc-card__ship"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-truck"/></svg><span class="hc-card__ship-text">Check delivery by PIN</span></p>
+    <!-- CTA: default "Choose Potency". Add class hc-card--quickadd on .hc-card for single-variant products to show "Add to Cart" instead. -->
+    <div class="hc-card__cta">
+      <a class="hc-btn hc-btn--accent hc-card__cta-choose" href="product-details.html?slug=arnica-1">Choose Potency</a>
+      <a class="hc-btn hc-btn--accent hc-card__cta-add" href="cart.html?action=add&amp;id=101" data-live-href="cart.php?action=add&amp;id=101" data-hc="quickadd" data-product-id="101"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-cart"/></svg>Add to Cart</a>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 600" preserveAspectRatio="xMidYMid slice">
+  <!-- PLACEHOLDER — CLIENT TO SUPPLY hero artwork (1920×600, subject in the right third) -->
+  <circle cx="1460" cy="330" r="230" fill="#FFFFFF" fill-opacity=".55"/>
+  <circle cx="1700" cy="120" r="90" fill="#FFFFFF" fill-opacity=".35"/>
+  <g transform="translate(1330 170) scale(.78)">
+    <path d="M120 0h100v52l26 36c10 14 16 31 16 49v262c0 22-18 40-40 40H118c-22 0-40-18-40-40V137c0-18 6-35 16-49l26-36z" fill="#B8742A" fill-opacity=".9"/>
+    <rect x="112" y="-38" width="116" height="52" rx="12" fill="#0E5A43"/>
+    <rect x="96" y="190" width="150" height="128" rx="10" fill="#FFFFFF"/>
+    <rect x="96" y="190" width="150" height="20" fill="#0E5A43"/>
+    <rect x="118" y="236" width="106" height="10" rx="5" fill="#0E5A43" fill-opacity=".55"/>
+    <rect x="118" y="260" width="78" height="10" rx="5" fill="#0E5A43" fill-opacity=".3"/>
+    <path d="M150 70c18 10 28 30 28 56" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="10" fill="none" stroke-linecap="round"/>
+  </g>
+  <g fill="#0E5A43" fill-opacity=".8">
+    <path d="M1600 470c-10-90 40-170 130-190 6 92-40 166-130 190z"/>
+    <path d="M1250 480c-70-40-100-110-80-180 70 34 104 104 80 180z" fill-opacity=".55"/>
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="1650" cy="500" r="14"/><circle cx="1682" cy="512" r="12"/><circle cx="1620" cy="512" r="11"/><circle cx="1660" cy="530" r="13"/>
+  </g>
+</svg>

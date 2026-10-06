@@ -1,0 +1,141 @@
+<!--meta {"title": "Your cart — Homoeo Centre", "desc": "Review the medicines in your cart.", "nav": "cart"}-->
+<body class="hc">
+{{HEADER}}
+
+<main class="hc-main" id="main">
+  <div class="hc-container">
+    <nav class="hc-crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><span aria-current="page">Cart</span></li></ol></nav>
+    <header class="hc-pagehead"><h1 class="hc-h1">Your cart</h1></header>
+
+    <!-- IF cart_empty -->
+    <div class="hc-panel hc-empty" id="hc-cart-empty" hidden>
+      <span class="hc-empty__art"><svg class="hc-icon" aria-hidden="true"><use href="#i-cart"/></svg></span>
+      <h2 class="hc-h2">Your cart is empty</h2>
+      <p>Find a remedy and choose its potency, or open any medicine and upload your prescription.</p>
+      <div class="hc-row"><a class="hc-btn hc-btn--accent" href="shop.html">Shop medicines</a><a class="hc-btn hc-btn--outline" href="index.html#order-your-way">How ordering works</a></div>
+    </div>
+    <!-- END IF -->
+
+    <!-- IF !cart_empty -->
+    <div class="hc-cart" id="hc-cart-full">
+      <form class="hc-panel hc-cartlist" action="#" data-live-action="cart.php" method="post" data-hc="cart" aria-label="Cart items">
+        <!-- LOOP cart: one item per $_SESSION cart line -->
+        <!-- CANONICAL ITEM (configured order) -->
+        <article class="hc-line" data-hc-line data-key="v1032-d0-a1b2" data-unit="175">
+          <a class="hc-line__img" href="product-details.html?slug=arnica-1"><img src="assets/img/product-sample.jpg" width="104" height="104" alt="" loading="lazy" data-hc-fallback data-initial="A" data-slot="cart.image"></a>
+          <div class="hc-line__info">
+            <h2 class="hc-line__name"><a href="product-details.html?slug=arnica-1" data-slot="cart.product_name">Arnica Montana</a></h2>
+            <p class="hc-line__variant" aria-label="Your configuration">
+              <span>Potency <b data-slot="cart.potency">30CH</b></span>
+              <span>Maker <b data-slot="cart.manufacturer">Dr. Reckeweg</b></span>
+              <span>Medium <b data-slot="cart.medium">Distilled Water</b></span>
+              <span>Bottle <b data-slot="cart.bottle">30ml</b></span>
+              <span>Doses <b data-slot="cart.dose">3</b></span>
+              <!-- IF patient_name --><span>Patient <b data-slot="cart.patient_name">Rina Das (64 yrs)</b></span><!-- END IF -->
+            </p>
+            <p class="hc-xs hc-muted" style="margin-top:6px">SKU <span data-slot="cart.sku">ARN-30CH-DRR-DW-30ML-D3</span></p>
+          </div>
+          <div class="hc-line__total">
+            <strong data-hc-line-total data-slot="cart.line_total">&#8377;175</strong>
+            <small>&#8377;<span data-slot="cart.unit_price">175</span> each</small>
+          </div>
+          <div class="hc-line__ctrl">
+            <label class="hc-sr" for="qty-1">Quantity for Arnica Montana</label>
+            <div class="hc-qty" data-hc="qty"><button type="button" data-hc-dec aria-label="Decrease quantity"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-minus"/></svg></button><input id="qty-1" name="qty[v1032-d0-a1b2]" type="number" min="1" max="20" value="1" inputmode="numeric"><button type="button" data-hc-inc aria-label="Increase quantity"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-plus"/></svg></button></div>
+            <div class="hc-line__actions">
+              <a class="hc-btn hc-btn--ghost hc-btn--sm" href="product-details.html?slug=arnica-1"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-edit"/></svg>Change</a>
+              <a class="hc-btn hc-btn--ghost hc-btn--sm" href="cart.html?action=remove&amp;key=v1032-d0-a1b2" data-live-href="cart.php?action=remove&amp;key=v1032-d0-a1b2" data-hc-remove><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-trash"/></svg>Remove</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="hc-line" data-hc-line data-key="v3014-d12-c3d4" data-unit="120">
+          <a class="hc-line__img" href="product-details.html?slug=chelidonium"><img src="admin/uploads/products/1790142746_4574.png" width="104" height="104" alt="" loading="lazy" data-hc-fallback data-initial="C"></a>
+          <div class="hc-line__info">
+            <h2 class="hc-line__name"><a href="product-details.html?slug=chelidonium">Chelidonium</a></h2>
+            <p class="hc-line__variant" aria-label="Your configuration">
+              <span>Potency <b>200CH</b></span>
+              <span>Maker <b>Indian</b></span>
+              <span>Medium <b>Sugar of Milk</b></span>
+              <span>Doses <b>12</b></span>
+              <span>Patient <b>Arjun Das (9 yrs)</b></span>
+            </p>
+            <p class="hc-xs hc-muted" style="margin-top:6px">SKU CHE-200CH-IND-SOM &middot; &#8377;10 per dose &times; 12</p>
+          </div>
+          <div class="hc-line__total"><strong data-hc-line-total>&#8377;120</strong><small>&#8377;120 each</small></div>
+          <div class="hc-line__ctrl">
+            <label class="hc-sr" for="qty-2">Quantity for Chelidonium</label>
+            <div class="hc-qty" data-hc="qty"><button type="button" data-hc-dec aria-label="Decrease quantity"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-minus"/></svg></button><input id="qty-2" name="qty[v3014-d12-c3d4]" type="number" min="1" max="20" value="1" inputmode="numeric"><button type="button" data-hc-inc aria-label="Increase quantity"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-plus"/></svg></button></div>
+            <div class="hc-line__actions">
+              <a class="hc-btn hc-btn--ghost hc-btn--sm" href="product-details.html?slug=chelidonium"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-edit"/></svg>Change</a>
+              <a class="hc-btn hc-btn--ghost hc-btn--sm" href="cart.html?action=remove&amp;key=v3014-d12-c3d4" data-hc-remove><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-trash"/></svg>Remove</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CANONICAL ITEM (prescription order): no data-unit, price confirmed by pharmacist -->
+        <article class="hc-line hc-line--rx" data-hc-line data-key="rx-RX261006A3F9C2">
+          <span class="hc-line__img" style="display:grid;place-items:center;background:var(--hc-tint);color:var(--hc-primary)"><svg class="hc-icon hc-icon--lg" aria-hidden="true"><use href="#i-file"/></svg></span>
+          <div class="hc-line__info">
+            <h2 class="hc-line__name"><span class="hc-badge hc-badge--rx">Rx</span> <a href="product-details.html?slug=chamomilla">Chamomilla</a></h2>
+            <p class="hc-line__rxref">Reference <strong data-slot="cart.rx_reference">RX261006A3F9C2</strong></p>
+            <p class="hc-line__variant">
+              <span>Patient <b data-slot="cart.patient_name">Rina Das (64 yrs)</b></span>
+              <span>Doctor <b data-slot="cart.doctor_name">Dr. S. Mukherjee</b></span>
+              <span>Potency <b data-slot="cart.preferred_potency">Let pharmacist decide</b></span>
+              <span>File <b data-slot="cart.rx_file">prescription-oct.jpg</b></span>
+            </p>
+          </div>
+          <div class="hc-line__total"><span class="hc-line__pending">Pharmacist will confirm price</span><small>We call you before dispatch</small></div>
+          <div class="hc-line__ctrl">
+            <label class="hc-sr" for="qty-3">Quantity for Chamomilla prescription</label>
+            <div class="hc-qty" data-hc="qty"><button type="button" data-hc-dec aria-label="Decrease quantity"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-minus"/></svg></button><input id="qty-3" name="qty[rx-RX261006A3F9C2]" type="number" min="1" max="20" value="1" inputmode="numeric"><button type="button" data-hc-inc aria-label="Increase quantity"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-plus"/></svg></button></div>
+            <div class="hc-line__actions">
+              <a class="hc-btn hc-btn--ghost hc-btn--sm" href="cart.html?action=remove&amp;key=rx-RX261006A3F9C2" data-hc-remove><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-trash"/></svg>Remove</a>
+            </div>
+          </div>
+        </article>
+        <!-- END LOOP -->
+
+        <div class="hc-cartfoot">
+          <a class="hc-btn hc-btn--ghost hc-btn--sm" href="shop.html"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-left"/></svg>Continue shopping</a>
+          <div class="hc-row">
+            <a class="hc-btn hc-btn--ghost hc-btn--sm" href="cart.html?action=clear" data-live-href="cart.php?action=clear">Empty cart</a>
+            <button class="hc-btn hc-btn--outline hc-btn--sm" type="submit" name="update_cart" value="1">Update cart</button>
+          </div>
+        </div>
+      </form>
+
+      <aside class="hc-panel hc-panel--pad hc-summary" id="hc-cart-summary" aria-labelledby="hc-order-sum">
+        <h2 class="hc-h3" id="hc-order-sum">Order summary</h2>
+        <dl class="hc-summary__rows">
+          <div><dt>Items</dt><dd data-hc-items data-slot="cart.item_count">3</dd></div>
+          <div><dt>Subtotal</dt><dd data-hc-subtotal data-slot="cart.subtotal">&#8377;295</dd></div>
+          <div data-hc-rx-row><dt>Prescription items</dt><dd><span data-hc-rx-count>1</span>, price on confirmation</dd></div>
+          <div><dt>Shipping</dt><dd>Calculated at checkout</dd></div>
+        </dl>
+        <div class="hc-summary__total"><span>Total</span><strong data-hc-grand data-slot="cart.total" aria-live="polite">&#8377;295</strong></div>
+        <p class="hc-xs hc-muted">Prescription items are added once the pharmacist confirms them.</p>
+        <a class="hc-btn hc-btn--accent hc-btn--lg hc-btn--block" href="checkout-concept.html" data-live-href="[developer: checkout page not built yet]">Proceed to Checkout</a>
+        <div class="hc-pin" data-hc="pincode" style="padding-top:12px;border-top:1px solid var(--hc-line)">
+          <form class="hc-pin__row" action="#" method="post">
+            <label class="hc-sr" for="cart-pincode">Delivery PIN code</label>
+            <input class="hc-input" id="cart-pincode" name="pincode" inputmode="numeric" maxlength="6" placeholder="Delivery PIN code" data-hc-pin-input>
+            <button class="hc-btn hc-btn--outline" type="submit">Check</button>
+          </form>
+          <p class="hc-pin__result" data-hc-pin-result aria-live="polite"></p>
+        </div>
+      </aside>
+    </div>
+    <!-- END IF -->
+  </div>
+  <!-- Sticky total (phones/tablets): appears once the order summary scrolls out of view -->
+  <div class="hc-buybar" data-hc="stickybar" data-hc-watch="#hc-cart-summary">
+    <div class="hc-buybar__price"><small>Total for <span data-hc-items>3</span> items</small><strong data-hc-grand>&#8377;295</strong></div>
+    <a class="hc-btn hc-btn--accent" href="checkout-concept.html" data-live-href="[developer: checkout page not built yet]">Proceed to Checkout</a>
+  </div>
+</main>
+
+{{FOOTER}}
+</body>
+</html>

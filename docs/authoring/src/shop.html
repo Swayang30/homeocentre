@@ -1,0 +1,195 @@
+<!--meta {"title": "Shop homeopathy medicines — Homoeo Centre", "desc": "Browse homeopathy medicines by category, manufacturer, potency and medium.", "nav": "shop"}-->
+<body class="hc">
+{{HEADER}}
+
+<div data-hc="protostate">
+<!-- PROTOTYPE ONLY — delete this bar during integration. The live template picks the state from the query string. -->
+<div class="hc-protobar">
+  <div class="hc-container hc-protobar__inner">
+    <strong>Prototype: one template, five states</strong>
+    <a href="shop.html" data-proto-link="all">All products</a>
+    <a href="shop.html?category=3" data-proto-link="category">Category</a>
+    <a href="shop.html?manufacturer=1" data-proto-link="manufacturer">Manufacturer</a>
+    <a href="shop.html?q=arnica" data-proto-link="search">Search results</a>
+    <a href="shop.html?view=empty" data-proto-link="empty">No results</a>
+  </div>
+</div>
+
+<main class="hc-main" id="main">
+  <div class="hc-container">
+
+    <!-- BEGIN breadcrumb → partials/breadcrumb.html -->
+    <nav class="hc-crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li data-proto-state="all empty"><span aria-current="page">Shop</span></li>
+        <li data-proto-state="category manufacturer search" hidden><a href="shop.html">Shop</a></li>
+        <li data-proto-state="category" hidden><span aria-current="page" data-slot="category.name">Dilution</span></li>
+        <li data-proto-state="manufacturer" hidden><span aria-current="page" data-slot="manufacturer.name">Dr. Reckeweg</span></li>
+        <li data-proto-state="search" hidden><span aria-current="page">Search</span></li>
+      </ol>
+    </nav>
+    <!-- END breadcrumb -->
+
+    <header class="hc-pagehead">
+      <!-- IF no filter --><div data-proto-state="all"><h1 class="hc-h1">All medicines</h1><p><span class="hc-num" data-slot="results.range">1&ndash;12</span> of <span class="hc-num" data-slot="results.total">262</span> products</p></div><!-- END IF -->
+      <!-- IF category --><div data-proto-state="category" hidden><h1 class="hc-h1" data-slot="category.name">Dilution</h1><p><span class="hc-num">1&ndash;12</span> of <span class="hc-num" data-slot="results.total">84</span> products in this category</p></div><!-- END IF -->
+      <!-- IF manufacturer --><div data-proto-state="manufacturer" hidden><h1 class="hc-h1" data-slot="manufacturer.name">Dr. Reckeweg</h1><p><span class="hc-num">1&ndash;12</span> of <span class="hc-num" data-slot="results.total">57</span> products from this manufacturer</p></div><!-- END IF -->
+      <!-- IF search --><div data-proto-state="search" hidden><h1 class="hc-h1">Results for &ldquo;<span data-proto-q data-slot="search.query">arnica</span>&rdquo;</h1><p><span class="hc-num" data-slot="results.total">12</span> products found</p></div><!-- END IF -->
+      <!-- IF empty --><div data-proto-state="empty" hidden><h1 class="hc-h1">Results for &ldquo;<span data-slot="search.query">sulphur 50M globules</span>&rdquo;</h1><p>0 products found</p></div><!-- END IF -->
+    </header>
+
+    <div class="hc-shop">
+
+      <!-- ============ FILTERS: sidebar on desktop, bottom sheet on mobile (same markup) ============ -->
+      <aside class="hc-sheet hc-sheet--filters" id="hc-filter-sheet" aria-label="Filters" aria-hidden="false">
+        <div class="hc-sheet__scrim" data-hc-close></div>
+        <form class="hc-sheet__panel" action="shop.html" data-live-action="shop.php" method="get" data-hc="filtercount" data-total="262">
+          <div class="hc-sheet__grip" aria-hidden="true"></div>
+          <div class="hc-sheet__head">
+            <h2 class="hc-h3">Filters</h2>
+            <button class="hc-iconbtn" type="button" data-hc-close aria-label="Close filters"><svg class="hc-icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+          </div>
+          <div class="hc-sheet__body">
+            <details class="hc-filter" open>
+              <summary>Category <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+              <div class="hc-filter__body">
+                <label class="hc-check"><input type="radio" name="category" value="" checked data-count="262"> All categories</label>
+                <!-- LOOP categories (with product counts) -->
+                <!-- CANONICAL ITEM -->
+                <label class="hc-check"><input type="radio" name="category" value="4" data-count="18"> <span data-slot="category.name">Bach Flower</span><span class="hc-filter__count" data-slot="category.product_count">18</span></label>
+                <label class="hc-check"><input type="radio" name="category" value="3" data-count="84"> Dilution<span class="hc-filter__count">84</span></label>
+                <label class="hc-check"><input type="radio" name="category" value="1" data-count="146"> LM Potency<span class="hc-filter__count">146</span></label>
+                <label class="hc-check"><input type="radio" name="category" value="5" data-count="14"> Pet Segments<span class="hc-filter__count">14</span></label>
+                <!-- END LOOP -->
+              </div>
+            </details>
+            <details class="hc-filter" open>
+              <summary>Manufacturer <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+              <div class="hc-filter__body">
+                <label class="hc-check"><input type="radio" name="manufacturer" value="" checked> All manufacturers</label>
+                <!-- LOOP manufacturers -->
+                <!-- CANONICAL ITEM -->
+                <label class="hc-check"><input type="radio" name="manufacturer" value="1"> <span data-slot="manufacturer.name">Dr. Reckeweg</span></label>
+                <label class="hc-check"><input type="radio" name="manufacturer" value="3"> German</label>
+                <label class="hc-check"><input type="radio" name="manufacturer" value="6"> Indian</label>
+                <label class="hc-check"><input type="radio" name="manufacturer" value="5"> Indian &amp; Germany</label>
+                <!-- END LOOP -->
+              </div>
+            </details>
+            <details class="hc-filter" open>
+              <summary>Potency <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+              <div class="hc-filter__body">
+                <!-- LOOP potencies (distinct product_variants.potency) -->
+                <label class="hc-check"><input type="checkbox" name="potency[]" value="6CH"> 6CH</label>
+                <label class="hc-check"><input type="checkbox" name="potency[]" value="12CH"> 12CH</label>
+                <label class="hc-check"><input type="checkbox" name="potency[]" value="30CH"> 30CH</label>
+                <label class="hc-check"><input type="checkbox" name="potency[]" value="200CH"> 200CH</label>
+                <label class="hc-check"><input type="checkbox" name="potency[]" value="1M"> 1M</label>
+                <label class="hc-check"><input type="checkbox" name="potency[]" value="10M"> 10M</label>
+                <label class="hc-check"><input type="checkbox" name="potency[]" value="LM"> LM</label>
+                <!-- END LOOP -->
+              </div>
+            </details>
+            <details class="hc-filter">
+              <summary>Medium <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+              <div class="hc-filter__body">
+                <!-- LOOP mediums -->
+                <label class="hc-check"><input type="checkbox" name="medium[]" value="Sugar of Milk"> Sugar of Milk</label>
+                <label class="hc-check"><input type="checkbox" name="medium[]" value="Distilled Water"> Distilled Water</label>
+                <label class="hc-check"><input type="checkbox" name="medium[]" value="Globules"> Globules</label>
+                <label class="hc-check"><input type="checkbox" name="medium[]" value="Liquid"> Liquid</label>
+                <!-- END LOOP -->
+              </div>
+            </details>
+            <details class="hc-filter">
+              <summary>Price <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+              <div class="hc-filter__body">
+                <div class="hc-filter__price">
+                  <div class="hc-field"><label class="hc-label" for="hc-price-min">Min &#8377;</label><input class="hc-input" id="hc-price-min" name="min_price" inputmode="numeric" placeholder="0"></div>
+                  <span aria-hidden="true" style="margin-top:28px">&ndash;</span>
+                  <div class="hc-field"><label class="hc-label" for="hc-price-max">Max &#8377;</label><input class="hc-input" id="hc-price-max" name="max_price" inputmode="numeric" placeholder="1000"></div>
+                </div>
+              </div>
+            </details>
+            <details class="hc-filter">
+              <summary>Sort <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-down"/></svg></summary>
+              <div class="hc-filter__body">
+                <label class="hc-check"><input type="radio" name="sort" value="latest" checked> Latest products</label>
+                <label class="hc-check"><input type="radio" name="sort" value="price_asc"> Price low to high</label>
+                <label class="hc-check"><input type="radio" name="sort" value="price_desc"> Price high to low</label>
+                <label class="hc-check"><input type="radio" name="sort" value="name"> Product name</label>
+              </div>
+            </details>
+          </div>
+          <div class="hc-sheet__foot">
+            <a class="hc-btn hc-btn--outline" href="shop.html">Clear all</a>
+            <button class="hc-btn hc-btn--primary" type="submit"><span data-hc-result-label>Show 262 results</span></button>
+            <p class="hc-sr" aria-live="polite"><span data-hc-result-count>262</span> products match</p>
+          </div>
+        </form>
+      </aside>
+
+      <!-- ============ RESULTS ============ -->
+      <section aria-labelledby="hc-results-h">
+        <h2 class="hc-sr" id="hc-results-h">Products</h2>
+        <div class="hc-toolbar" data-proto-state="all category manufacturer search">
+          <button class="hc-btn hc-btn--outline hc-btn--sm hc-filterbtn" type="button" data-hc-open="hc-filter-sheet" aria-controls="hc-filter-sheet" aria-expanded="false"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-filter"/></svg>Filters</button>
+          <!-- Active-filter chips: each chip links to the current URL without that filter -->
+          <ul class="hc-chips" aria-label="Active filters">
+            <li data-proto-state="category" hidden><a class="hc-chip" href="shop.html">Dilution <span class="hc-sr">remove filter</span><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-close"/></svg></a></li>
+            <li data-proto-state="category" hidden><a class="hc-chip" href="shop.html?category=3">Potency: 30CH <span class="hc-sr">remove filter</span><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-close"/></svg></a></li>
+            <li data-proto-state="manufacturer" hidden><a class="hc-chip" href="shop.html">Dr. Reckeweg <span class="hc-sr">remove filter</span><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-close"/></svg></a></li>
+            <li data-proto-state="search" hidden><a class="hc-chip" href="shop.html">&ldquo;<span data-proto-q>arnica</span>&rdquo; <span class="hc-sr">clear search</span><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-close"/></svg></a></li>
+            <li data-proto-state="category manufacturer search" hidden><a class="hc-chip hc-chip--clear" href="shop.html">Clear all</a></li>
+          </ul>
+          <form class="hc-toolbar__sort" action="shop.html" data-live-action="shop.php" method="get">
+            <label class="hc-small hc-muted" for="hc-sort">Sort by</label>
+            <select class="hc-select" id="hc-sort" name="sort" data-hc="autosubmit">
+              <option value="latest">Latest products</option>
+              <option value="price_asc">Price: low to high</option>
+              <option value="price_desc">Price: high to low</option>
+              <option value="name">Product name</option>
+            </select>
+            <noscript><button class="hc-btn hc-btn--sm hc-btn--outline" type="submit">Sort</button></noscript>
+          </form>
+        </div>
+
+        <div data-proto-state="all category manufacturer search">
+          <ul class="hc-grid hc-grid--wide">
+{{CARDS:arnica-1,chamomilla,chelidonium,chimaphilla,chenopodium,cephalandra-ind,cenchris-con,cedron,ceanothus-a,causticum,cassia-sophera,arnica-1|quick=causticum|eager=4}}
+          </ul>
+
+          <nav class="hc-pager" aria-label="Pages">
+            <span class="hc-is-disabled" aria-hidden="true"><svg class="hc-icon hc-icon--sm"><use href="#i-chev-left"/></svg></span>
+            <a href="shop.html?page=1" aria-current="page">1</a>
+            <a href="shop.html?page=2">2</a>
+            <a href="shop.html?page=3">3</a>
+            <span class="hc-is-gap" aria-hidden="true">&hellip;</span>
+            <a href="shop.html?page=22">22</a>
+            <a href="shop.html?page=2" aria-label="Next page"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></a>
+          </nav>
+        </div>
+
+        <!-- BEGIN empty-state → partials/empty-state.html -->
+        <!-- IF results_empty -->
+        <div class="hc-panel hc-empty" data-proto-state="empty" hidden>
+          <span class="hc-empty__art"><svg class="hc-icon" aria-hidden="true"><use href="#i-search"/></svg></span>
+          <h2 class="hc-h2">No medicines match that search</h2>
+          <p>Check the spelling, search by remedy name only (for example &ldquo;Sulphur&rdquo;), or remove a filter. If you have a prescription, our pharmacist can source it for you.</p>
+          <div class="hc-row">
+            <a class="hc-btn hc-btn--primary" href="shop.html">Browse all medicines</a>
+            <a class="hc-btn hc-btn--outline" href="contact.html">Ask the pharmacist</a>
+          </div>
+        </div>
+        <!-- END IF -->
+        <!-- END empty-state -->
+      </section>
+    </div>
+  </div>
+</main>
+</div>
+
+{{FOOTER}}
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!--meta {"title": "Homoeo Centre — Homeopathy medicines online, Kolkata", "desc": "Order genuine homeopathy medicines from Kolkata. Choose potency, manufacturer, medium and bottle size, or upload your prescription for a pharmacist to prepare.", "nav": "home", "extra": ""}-->
+<body class="hc">
+<!-- Announcement bar (home only). Leave empty to hide. -->
+<div class="hc-announce" data-hc-dismissable>
+  <div class="hc-container hc-announce__inner">
+    <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-rx"/></svg>
+    <p data-slot="store.announcement">Order by potency, or upload your prescription and our pharmacist prepares it for you.</p>
+  </div>
+</div>
+
+{{HEADER}}
+
+<main class="hc-main" id="main">
+  <h1 class="hc-sr">Homoeo Centre: homeopathy medicines online from Kolkata</h1>
+
+  <!-- ============ HERO ============ -->
+  <section class="hc-hero" aria-roledescription="carousel" aria-label="Highlights">
+    <div class="hc-carousel" data-hc="carousel">
+      <div class="hc-carousel__track">
+        <!-- LOOP slides: type 1 = art + live text (recommended). Type 2 (image-only) example at the end of this list. -->
+        <!-- CANONICAL ITEM -->
+        <div class="hc-carousel__slide hc-slide hc-slide--text" style="--hc-slide-bg: #E6F0EB">
+          <!-- Art slot: CLIENT TO SUPPLY hero artwork. Desktop 1920x600 (subject on the right third), mobile 900x506. -->
+          <picture class="hc-slide__art">
+            <source media="(max-width: 767px)" srcset="assets/img/hero-placeholder-m.svg" width="900" height="506">
+            <img src="assets/img/hero-placeholder.svg" width="1920" height="600" alt="" decoding="async" fetchpriority="high" data-slot="slide.image">
+          </picture>
+          <span class="hc-slide__supply hc-confirm">CLIENT TO SUPPLY: hero artwork</span>
+          <div class="hc-container hc-slide__content">
+            <h2 class="hc-slide__title" data-slot="slide.title">Homeopathy medicines, prepared to your potency</h2>
+            <p class="hc-slide__text" data-slot="slide.text">Choose the potency, manufacturer, medium and bottle size, and see the price as you go.</p>
+            <div class="hc-slide__ctas"><a class="hc-btn hc-btn--accent" href="shop.html" data-slot="slide.cta_url">Choose Potency</a><a class="hc-btn hc-btn--outline" href="#order-your-way">How ordering works</a></div>
+          </div>
+        </div>
+        <div class="hc-carousel__slide hc-slide hc-slide--text" style="--hc-slide-bg: #F2EEE3">
+          <!-- Art slot: CLIENT TO SUPPLY hero artwork. Desktop 1920x600 (subject on the right third), mobile 900x506. -->
+          <picture class="hc-slide__art">
+            <source media="(max-width: 767px)" srcset="assets/img/hero-placeholder-m.svg" width="900" height="506">
+            <img src="assets/img/hero-placeholder.svg" width="1920" height="600" alt="" decoding="async" loading="lazy" data-slot="slide.image">
+          </picture>
+          <span class="hc-slide__supply hc-confirm">CLIENT TO SUPPLY: hero artwork</span>
+          <div class="hc-container hc-slide__content">
+            <h2 class="hc-slide__title">Have a prescription? Send it to our pharmacist</h2>
+            <p class="hc-slide__text">Upload a photo or PDF. A licensed pharmacist reviews it and we call to confirm before dispatch.</p>
+            <div class="hc-slide__ctas"><a class="hc-btn hc-btn--accent" href="product-details.html?slug=arnica-1#prescription">Upload Prescription</a></div>
+          </div>
+        </div>
+        <div class="hc-carousel__slide hc-slide hc-slide--text" style="--hc-slide-bg: #DDEBE4">
+          <!-- Art slot: CLIENT TO SUPPLY hero artwork. Desktop 1920x600 (subject on the right third), mobile 900x506. -->
+          <picture class="hc-slide__art">
+            <source media="(max-width: 767px)" srcset="assets/img/hero-placeholder-m.svg" width="900" height="506">
+            <img src="assets/img/hero-placeholder.svg" width="1920" height="600" alt="" decoding="async" loading="lazy" data-slot="slide.image">
+          </picture>
+          <span class="hc-slide__supply hc-confirm">CLIENT TO SUPPLY: hero artwork</span>
+          <div class="hc-container hc-slide__content">
+            <h2 class="hc-slide__title">Genuine medicines from Indian and German makers</h2>
+            <p class="hc-slide__text">Dilutions, LM potencies, Bach Flower remedies and remedies for pets.</p>
+            <div class="hc-slide__ctas"><a class="hc-btn hc-btn--accent" href="shop.html">Shop by manufacturer</a></div>
+          </div>
+        </div>
+        <!-- TYPE 2 — image-only slide (artwork with its own text). Use the client's two crops:
+        <div class="hc-carousel__slide hc-slide hc-slide--image" style="--hc-pos: 50% 50%; --hc-pos-m: 50% 50%">
+          <picture>
+            <source media="(max-width: 767px)" srcset="assets/img/slide1-m.jpg" width="900" height="675">
+            <img src="assets/img/slide1.jpg" width="1920" height="600" alt="Describe the banner text here" loading="lazy">
+          </picture>
+        </div>
+        -->
+        <!-- END LOOP -->
+      </div>
+      <button class="hc-carousel__arrow hc-carousel__arrow--prev" type="button" data-hc-prev aria-label="Previous slide"><svg class="hc-icon" aria-hidden="true"><use href="#i-chev-left"/></svg></button>
+      <button class="hc-carousel__arrow hc-carousel__arrow--next" type="button" data-hc-next aria-label="Next slide"><svg class="hc-icon" aria-hidden="true"><use href="#i-chev-right"/></svg></button>
+      <div class="hc-carousel__dots"></div>
+      <button class="hc-carousel__pause" type="button" data-hc-pause aria-label="Pause slideshow"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-pause"/></svg></button>
+      <p class="hc-sr" aria-live="polite" data-hc-live></p>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY TILES (overlap hero bottom on desktop) ============ -->
+  <section class="hc-cattiles" aria-labelledby="hc-cat-title">
+    <div class="hc-container">
+      <h2 class="hc-sr" id="hc-cat-title">Shop by category</h2>
+      <ul class="hc-cattiles__grid">
+        <!-- LOOP categories: one tile per category -->
+        <!-- CANONICAL ITEM -->
+        <li><a class="hc-cattile" href="shop.html?category=3" data-live-href="shop.php?category=3">
+          <span class="hc-cattile__icon"><svg class="hc-icon" aria-hidden="true"><use href="#i-drop"/></svg></span>
+          <span class="hc-cattile__name" data-slot="category.name">Dilution</span>
+          <span class="hc-cattile__meta">Centesimal potencies, 6CH to 10M</span>
+          <span class="hc-cattile__go">Shop now <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></span>
+        </a></li>
+        <li><a class="hc-cattile" href="shop.html?category=1">
+          <span class="hc-cattile__icon"><svg class="hc-icon" aria-hidden="true"><use href="#i-beaker"/></svg></span>
+          <span class="hc-cattile__name" data-slot="category.name">LM Potency</span>
+          <span class="hc-cattile__meta">50-millesimal potencies</span>
+          <span class="hc-cattile__go">Shop now <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></span>
+        </a></li>
+        <li><a class="hc-cattile" href="shop.html?category=4">
+          <span class="hc-cattile__icon"><svg class="hc-icon" aria-hidden="true"><use href="#i-flower"/></svg></span>
+          <span class="hc-cattile__name" data-slot="category.name">Bach Flower</span>
+          <span class="hc-cattile__meta">Flower remedies</span>
+          <span class="hc-cattile__go">Shop now <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></span>
+        </a></li>
+        <li><a class="hc-cattile" href="shop.html?category=5">
+          <span class="hc-cattile__icon"><svg class="hc-icon" aria-hidden="true"><use href="#i-paw"/></svg></span>
+          <span class="hc-cattile__name" data-slot="category.name">Pet Segments</span>
+          <span class="hc-cattile__meta">Remedies for pets</span>
+          <span class="hc-cattile__go">Shop now <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></span>
+        </a></li>
+        <!-- END LOOP -->
+        <li class="hc-cattile--promo-wrap"><a class="hc-cattile hc-cattile--promo" href="#order-your-way">
+          <span class="hc-cattile__icon"><svg class="hc-icon" aria-hidden="true"><use href="#i-rx"/></svg></span>
+          <span class="hc-cattile__name">Have a prescription?</span>
+          <span class="hc-cattile__meta">Upload it on any medicine page. A pharmacist prepares the order.</span>
+          <span class="hc-cattile__go">See how it works <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></span>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ ORDER YOUR WAY ============ -->
+  <section class="hc-section" id="order-your-way" aria-labelledby="hc-ways-title">
+    <div class="hc-container hc-ways">
+      <div class="hc-ways__intro">
+        <h2 class="hc-h1" id="hc-ways-title">Order your way</h2>
+        <p>Every medicine can be ordered two ways. Pick the exact potency yourself, or send us your doctor&rsquo;s prescription and let our pharmacist prepare it.</p>
+      </div>
+      <article class="hc-label-card" aria-labelledby="hc-way-a">
+        <div class="hc-label-card__head">
+          <span class="hc-label-card__mark" aria-hidden="true">A</span>
+          <h3 class="hc-label-card__title" id="hc-way-a">Configure my order</h3>
+        </div>
+        <ol class="hc-label-card__steps">
+          <li>Choose potency, from 6CH to 10M or LM</li>
+          <li>Pick the manufacturer and medium</li>
+          <li>Select bottle size and number of doses</li>
+          <li>See the live price, then add to cart</li>
+        </ol>
+        <a class="hc-btn hc-btn--accent" href="shop.html">Choose Potency</a>
+      </article>
+      <article class="hc-label-card" aria-labelledby="hc-way-b">
+        <div class="hc-label-card__head">
+          <span class="hc-label-card__mark" aria-hidden="true">Rx</span>
+          <h3 class="hc-label-card__title" id="hc-way-b">Order via prescription</h3>
+        </div>
+        <ol class="hc-label-card__steps">
+          <li>Open the medicine and upload a photo or PDF</li>
+          <li>Add patient and doctor details</li>
+          <li>A licensed pharmacist reviews it</li>
+          <li>We call to confirm before dispatch</li>
+        </ol>
+        <a class="hc-btn hc-btn--outline" href="product-details.html?slug=arnica-1#prescription">Upload Prescription</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED PRODUCTS RAIL ============ -->
+  <section class="hc-section" aria-labelledby="hc-featured-title" style="padding-top:0">
+    <div class="hc-container">
+      <div class="hc-sechead">
+        <div><h2 class="hc-h2" id="hc-featured-title">Featured products</h2><p>Popular remedies from our range</p></div>
+        <a class="hc-seeall" href="shop.html">See all <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></a>
+      </div>
+      <div class="hc-rail" data-hc="rail">
+        <button class="hc-rail__btn hc-rail__btn--prev" type="button" data-hc-prev aria-label="Scroll featured products left"><svg class="hc-icon" aria-hidden="true"><use href="#i-chev-left"/></svg></button>
+        <ul class="hc-rail__track">
+{{CARDS:arnica-1,chamomilla,chelidonium,chimaphilla,chenopodium,cephalandra-ind,cenchris-con,cedron}}
+        </ul>
+        <button class="hc-rail__btn hc-rail__btn--next" type="button" data-hc-next aria-label="Scroll featured products right"><svg class="hc-icon" aria-hidden="true"><use href="#i-chev-right"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SHOP BY MANUFACTURER ============ -->
+  <section class="hc-section" aria-labelledby="hc-mfr-title" style="padding-top:8px">
+    <div class="hc-container">
+      <div class="hc-sechead">
+        <div><h2 class="hc-h2" id="hc-mfr-title">Shop by manufacturer</h2><p>Genuine stock from leading Indian and German makers</p></div>
+      </div>
+      <ul class="hc-brands">
+        <!-- LOOP manufacturers: logo if manufacturers.logo exists, otherwise the styled wordmark -->
+        <!-- CANONICAL ITEM -->
+        <li><a class="hc-brand" href="shop.html?manufacturer=1" data-live-href="shop.php?manufacturer=1">
+          <!-- IF manufacturer.logo --><!-- <img class="hc-brand__logo" src="…" alt="Dr. Reckeweg" width="160" height="44" loading="lazy"> --><!-- ELSE -->
+          <span class="hc-brand__word" data-slot="manufacturer.name">Dr. Reckeweg</span><!-- END IF -->
+          <span class="hc-brand__meta">View range <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></span>
+        </a></li>
+        <li><a class="hc-brand" href="shop.html?manufacturer=3"><span class="hc-brand__word" data-slot="manufacturer.name">German</span><span class="hc-brand__meta">View range <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></span></a></li>
+        <li><a class="hc-brand" href="shop.html?manufacturer=6"><span class="hc-brand__word" data-slot="manufacturer.name">Indian</span><span class="hc-brand__meta">View range <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></span></a></li>
+        <li><a class="hc-brand" href="shop.html?manufacturer=5"><span class="hc-brand__word" data-slot="manufacturer.name">Indian &amp; Germany</span><span class="hc-brand__meta">View range <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></span></a></li>
+        <!-- END LOOP -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ LATEST PRODUCTS RAIL ============ -->
+  <section class="hc-section" aria-labelledby="hc-latest-title" style="padding-top:8px">
+    <div class="hc-container">
+      <div class="hc-sechead">
+        <div><h2 class="hc-h2" id="hc-latest-title">Latest products</h2><p>Recently added to the shelf</p></div>
+        <a class="hc-seeall" href="shop.html?sort=latest">See all <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></a>
+      </div>
+      <div class="hc-rail" data-hc="rail">
+        <button class="hc-rail__btn hc-rail__btn--prev" type="button" data-hc-prev aria-label="Scroll latest products left"><svg class="hc-icon" aria-hidden="true"><use href="#i-chev-left"/></svg></button>
+        <ul class="hc-rail__track">
+{{CARDS:causticum,cassia-sophera,ceanothus-a,cedron,cenchris-con,cephalandra-ind,chenopodium,chimaphilla|quick=causticum}}
+        </ul>
+        <button class="hc-rail__btn hc-rail__btn--next" type="button" data-hc-next aria-label="Scroll latest products right"><svg class="hc-icon" aria-hidden="true"><use href="#i-chev-right"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BRANDS WE STOCK (auto-scrolling logo strip) ============ -->
+  <section class="hc-section hc-band" aria-labelledby="hc-brandstrip-title">
+    <div class="hc-container">
+      <div class="hc-sechead">
+        <div><h2 class="hc-h2" id="hc-brandstrip-title">Brands we stock</h2><p>Genuine medicines from leading Indian and German manufacturers.</p></div>
+        <button class="hc-mq-toggle" type="button" data-hc-marquee-toggle aria-controls="hc-brand-marquee" aria-pressed="false" aria-label="Pause brand logos" title="Pause brand logos"><svg class="hc-icon hc-icon--sm hc-mq-toggle__pause" aria-hidden="true"><use href="#i-pause"/></svg><svg class="hc-icon hc-icon--sm hc-mq-toggle__play" aria-hidden="true"><use href="#i-play"/></svg></button>
+      </div>
+      <!-- Marquee: hc.js clones the list ONCE (aria-hidden) to make the seamless loop. The PHP loop outputs each brand exactly once. -->
+      <div class="hc-marquee hc-marquee--logos" id="hc-brand-marquee" data-hc="marquee" data-direction="rtl" data-pause-on="hover focus touch" data-static="wrap">
+        <div class="hc-marquee__track">
+          <ul class="hc-marquee__list">
+          <!-- LOOP brands: one item per brand logo -->
+          <li class="hc-marquee__item"><span class="hc-logo-tile" data-slot="manufacturer.id" data-manufacturer-id=""><img src="assets/img/brands/logo1.jpg" alt="Dr. Willmar Schwabe India" width="200" height="100" loading="lazy" decoding="async" data-slot="brand.logo" data-slot-alt="brand.name"></span></li>
+          <!-- CANONICAL ITEM: link the tile only when the brand exists as a manufacturer (shop.php?manufacturer={id}); brands without one use the <span> variant -->
+          <li class="hc-marquee__item"><a class="hc-logo-tile" href="shop.html?manufacturer=1" data-live-href="shop.php?manufacturer=1" data-slot="brand.url"><img src="assets/img/brands/logo2.jpg" alt="Dr. Reckeweg &amp; Co. Germany" width="200" height="100" loading="lazy" decoding="async" data-slot="brand.logo" data-slot-alt="brand.name"></a></li>
+          <li class="hc-marquee__item"><span class="hc-logo-tile" data-slot="manufacturer.id" data-manufacturer-id=""><img src="assets/img/brands/logo12.jpg" alt="Adven" width="200" height="100" loading="lazy" decoding="async" data-slot="brand.logo" data-slot-alt="brand.name"></span></li>
+          <li class="hc-marquee__item"><span class="hc-logo-tile" data-slot="manufacturer.id" data-manufacturer-id=""><img src="assets/img/brands/logo5.jpg" alt="Bakson Group" width="200" height="100" loading="lazy" decoding="async" data-slot="brand.logo" data-slot-alt="brand.name"></span></li>
+          <li class="hc-marquee__item"><span class="hc-logo-tile" data-slot="manufacturer.id" data-manufacturer-id=""><img src="assets/img/brands/logo6.jpg" alt="Wheezal Homoeopathy" width="200" height="100" loading="lazy" decoding="async" data-slot="brand.logo" data-slot-alt="brand.name"></span></li>
+          <li class="hc-marquee__item"><span class="hc-logo-tile" data-slot="manufacturer.id" data-manufacturer-id=""><img src="assets/img/brands/logo7.jpg" alt="Hapco" width="200" height="100" loading="lazy" decoding="async" data-slot="brand.logo" data-slot-alt="brand.name"></span></li>
+          <li class="hc-marquee__item"><span class="hc-logo-tile" data-slot="manufacturer.id" data-manufacturer-id=""><img src="assets/img/brands/logo8.jpg" alt="Bhargava Phytolab" width="200" height="100" loading="lazy" decoding="async" data-slot="brand.logo" data-slot-alt="brand.name"></span></li>
+          <li class="hc-marquee__item"><span class="hc-logo-tile" data-slot="manufacturer.id" data-manufacturer-id=""><img src="assets/img/brands/logo9.jpg" alt="Fourrts" width="200" height="100" loading="lazy" decoding="async" data-slot="brand.logo" data-slot-alt="brand.name"></span></li>
+          <li class="hc-marquee__item"><span class="hc-logo-tile" data-slot="manufacturer.id" data-manufacturer-id=""><img src="assets/img/brands/logo10.jpg" alt="SSL" width="200" height="100" loading="lazy" decoding="async" data-slot="brand.logo" data-slot-alt="brand.name"></span></li>
+          <li class="hc-marquee__item"><span class="hc-logo-tile" data-slot="manufacturer.id" data-manufacturer-id=""><img src="assets/img/brands/logo11.jpg" alt="Dr. B Homeopathy" width="200" height="100" loading="lazy" decoding="async" data-slot="brand.logo" data-slot-alt="brand.name"></span></li>
+          <li class="hc-marquee__item"><span class="hc-logo-tile" data-slot="manufacturer.id" data-manufacturer-id=""><img src="assets/img/brands/logo4.jpg" alt="ADEL Germany" width="200" height="100" loading="lazy" decoding="async" data-slot="brand.logo" data-slot-alt="brand.name"></span></li>
+          <!-- END LOOP -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <section class="hc-section" aria-labelledby="hc-trust-title" style="padding-top:8px">
+    <div class="hc-container">
+      <h2 class="hc-sr" id="hc-trust-title">Why order from us</h2>
+      <ul class="hc-trust">
+        <li class="hc-trust__item"><span class="hc-trust__icon"><svg class="hc-icon" aria-hidden="true"><use href="#i-shield"/></svg></span><div><p class="hc-trust__title">Genuine medicines</p><p class="hc-trust__text">From leading Indian &amp; German manufacturers</p></div></li>
+        <li class="hc-trust__item"><span class="hc-trust__icon"><svg class="hc-icon" aria-hidden="true"><use href="#i-pharmacist"/></svg></span><div><p class="hc-trust__title">Pharmacist checked</p><p class="hc-trust__text">Every prescription is reviewed by a pharmacist</p></div></li>
+        <li class="hc-trust__item"><span class="hc-trust__icon"><svg class="hc-icon" aria-hidden="true"><use href="#i-call"/></svg></span><div><p class="hc-trust__title">Confirmation call</p><p class="hc-trust__text">We call you before dispatch</p></div></li>
+        <li class="hc-trust__item"><span class="hc-trust__icon"><svg class="hc-icon" aria-hidden="true"><use href="#i-truck"/></svg></span><div><p class="hc-trust__title">Delivery check by PIN</p><p class="hc-trust__text">See availability before you order</p></div></li>
+        <!-- Keep hidden until a payment gateway exists:
+        <li class="hc-trust__item"><span class="hc-trust__icon"><svg class="hc-icon" aria-hidden="true"><use href="#i-lock"/></svg></span><div><p class="hc-trust__title">Secure payments</p><p class="hc-trust__text">…</p></div></li>
+        -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS (auto-scrolling, left to right). 1–4 verbatim from the live site; 5–8 are SAMPLE text. ============ -->
+  <section class="hc-section" aria-labelledby="hc-quotes-title" style="padding-top:8px">
+    <div class="hc-container">
+      <div class="hc-sechead">
+        <div><h2 class="hc-h2" id="hc-quotes-title">What our customers say</h2><p>Honest feedback from people who order their homoeopathy medicines with us.</p></div>
+        <button class="hc-mq-toggle" type="button" data-hc-marquee-toggle aria-controls="hc-quote-marquee" aria-pressed="false" aria-label="Pause testimonials" title="Pause testimonials"><svg class="hc-icon hc-icon--sm hc-mq-toggle__pause" aria-hidden="true"><use href="#i-pause"/></svg><svg class="hc-icon hc-icon--sm hc-mq-toggle__play" aria-hidden="true"><use href="#i-play"/></svg></button>
+      </div>
+      <!-- Marquee: hc.js clones the list ONCE (aria-hidden). Avatar initials are generated from the name by hc.js. -->
+      <div class="hc-marquee hc-marquee--quotes" id="hc-quote-marquee" data-hc="marquee" data-direction="ltr" data-pause-on="hover focus touch" data-static="scroll">
+        <button class="hc-marquee__arrow hc-marquee__arrow--prev" type="button" data-hc-mq-prev aria-label="Previous testimonials"><svg class="hc-icon" aria-hidden="true"><use href="#i-chev-left"/></svg></button>
+        <div class="hc-marquee__track">
+          <ul class="hc-marquee__list">
+          <!-- LOOP testimonials -->
+          <!-- CANONICAL ITEM -->
+          <li class="hc-marquee__item"><figure class="hc-quote">
+            <span class="hc-quote__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote data-slot="testimonial.quote">I needed a specific LM potency that my local shop rarely stocks. I found it here, chose the exact bottle size, and the order arrived well packed and correctly labelled.</blockquote>
+            <figcaption><span class="hc-quote__avatar" aria-hidden="true" data-hc-initials></span><span><span class="hc-quote__name" data-slot="testimonial.name">Sutapa Ghosh</span><br><span class="hc-quote__place" data-slot="testimonial.location">Behala, Kolkata</span></span></figcaption>
+          </figure></li>
+          <li class="hc-marquee__item"><figure class="hc-quote">
+            <span class="hc-quote__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote data-slot="testimonial.quote">I uploaded my doctor&#x27;s prescription and the pharmacist called to confirm the details before dispatch. That call gave me real confidence that I was getting exactly what was prescribed.</blockquote>
+            <figcaption><span class="hc-quote__avatar" aria-hidden="true" data-hc-initials></span><span><span class="hc-quote__name" data-slot="testimonial.name">Arindam Saha</span><br><span class="hc-quote__place" data-slot="testimonial.location">Salt Lake, Kolkata</span></span></figcaption>
+          </figure></li>
+          <li class="hc-marquee__item"><figure class="hc-quote">
+            <span class="hc-quote__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote data-slot="testimonial.quote">Ordering for my parents used to mean a trip across the city. Now I check delivery with our PIN code, place the order in a few minutes, and it reaches their home.</blockquote>
+            <figcaption><span class="hc-quote__avatar" aria-hidden="true" data-hc-initials></span><span><span class="hc-quote__name" data-slot="testimonial.name">Moumita Banerjee</span><br><span class="hc-quote__place" data-slot="testimonial.location">Dum Dum, Kolkata</span></span></figcaption>
+          </figure></li>
+          <li class="hc-marquee__item"><figure class="hc-quote">
+            <span class="hc-quote__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote data-slot="testimonial.quote">Clear prices, genuine brands and no confusion about potency or medium. The step-by-step ordering made it easy even for someone who isn&#x27;t familiar with homoeopathy terms.</blockquote>
+            <figcaption><span class="hc-quote__avatar" aria-hidden="true" data-hc-initials></span><span><span class="hc-quote__name" data-slot="testimonial.name">Rajib Mondal</span><br><span class="hc-quote__place" data-slot="testimonial.location">Howrah</span></span></figcaption>
+          </figure></li>
+          <!-- SAMPLE TESTIMONIAL — replace with real customer feedback before go-live -->
+          <li class="hc-marquee__item"><figure class="hc-quote" data-sample="true">
+            <span class="hc-quote__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote data-slot="testimonial.quote">I was worried about getting the wrong medium for my son, but the order page let me pick globules and the exact bottle size. Everything matched what our doctor wrote.</blockquote>
+            <figcaption><span class="hc-quote__avatar" aria-hidden="true" data-hc-initials></span><span><span class="hc-quote__name" data-slot="testimonial.name">Priyanka Dutta</span><br><span class="hc-quote__place" data-slot="testimonial.location">New Town, Kolkata</span></span></figcaption>
+          </figure></li>
+          <!-- SAMPLE TESTIMONIAL — replace with real customer feedback before go-live -->
+          <li class="hc-marquee__item"><figure class="hc-quote" data-sample="true">
+            <span class="hc-quote__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote data-slot="testimonial.quote">The German brand I use is hard to find near my home. I searched it here, checked the PIN code, and it was delivered without any follow-up calls from my side.</blockquote>
+            <figcaption><span class="hc-quote__avatar" aria-hidden="true" data-hc-initials></span><span><span class="hc-quote__name" data-slot="testimonial.name">Sourav Chatterjee</span><br><span class="hc-quote__place" data-slot="testimonial.location">Barasat</span></span></figcaption>
+          </figure></li>
+          <!-- SAMPLE TESTIMONIAL — replace with real customer feedback before go-live -->
+          <li class="hc-marquee__item"><figure class="hc-quote" data-sample="true">
+            <span class="hc-quote__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote data-slot="testimonial.quote">My father&#x27;s doctor prescribes LM potencies, which always confused me. Choosing the LM range and potency step by step made it simple to order on his behalf.</blockquote>
+            <figcaption><span class="hc-quote__avatar" aria-hidden="true" data-hc-initials></span><span><span class="hc-quote__name" data-slot="testimonial.name">Ananya Sen</span><br><span class="hc-quote__place" data-slot="testimonial.location">Garia, Kolkata</span></span></figcaption>
+          </figure></li>
+          <!-- SAMPLE TESTIMONIAL — replace with real customer feedback before go-live -->
+          <li class="hc-marquee__item"><figure class="hc-quote" data-sample="true">
+            <span class="hc-quote__mark" aria-hidden="true">&ldquo;</span>
+            <blockquote data-slot="testimonial.quote">I sent a photo of the prescription from my phone. The pharmacist called the same day to check one detail before packing it, which I really appreciated.</blockquote>
+            <figcaption><span class="hc-quote__avatar" aria-hidden="true" data-hc-initials></span><span><span class="hc-quote__name" data-slot="testimonial.name">Debashis Roy</span><br><span class="hc-quote__place" data-slot="testimonial.location">Serampore</span></span></figcaption>
+          </figure></li>
+          <!-- END LOOP -->
+          </ul>
+        </div>
+        <button class="hc-marquee__arrow hc-marquee__arrow--next" type="button" data-hc-mq-next aria-label="Next testimonials"><svg class="hc-icon" aria-hidden="true"><use href="#i-chev-right"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+{{FOOTER}}
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- Product rail partial: heading + "See all" + horizontally scrolling cards. Repeat the card partial inside the LOOP. -->
+<section class="hc-section" aria-labelledby="RAIL-ID">
+  <div class="hc-container">
+    <div class="hc-sechead">
+      <div><h2 class="hc-h2" id="RAIL-ID" data-slot="rail.title">Featured products</h2><p data-slot="rail.subtitle">Popular remedies from our range</p></div>
+      <a class="hc-seeall" href="shop.html" data-slot="rail.see_all_url">See all <svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-chev-right"/></svg></a>
+    </div>
+    <div class="hc-rail" data-hc="rail">
+      <button class="hc-rail__btn hc-rail__btn--prev" type="button" data-hc-prev aria-label="Scroll left"><svg class="hc-icon" aria-hidden="true"><use href="#i-chev-left"/></svg></button>
+      <ul class="hc-rail__track">
+<!-- LOOP products: one item per row of the product query -->
+<li><!-- CANONICAL ITEM -->
+<article class="hc-card" data-product-id="101" data-slot="product.id">
+  <a class="hc-card__media" href="product-details.html?slug=arnica-1" tabindex="-1" aria-hidden="true"><img src="assets/img/product-sample-400.jpg" srcset="assets/img/product-sample-400.jpg 400w, assets/img/product-sample.jpg 600w" sizes="(min-width: 1440px) 17vw, (min-width: 1024px) 22vw, (min-width: 600px) 30vw, 46vw" alt="Arnica Montana" width="400" height="400" loading="lazy" decoding="async" data-hc-fallback data-initial="A" data-slot="product.image"></a>
+  <div class="hc-card__badges">
+    <!-- IF discount >= threshold --><span class="hc-badge hc-badge--off" data-off-wrap hidden><span data-off></span></span><!-- END IF -->
+    
+  </div>
+  <button class="hc-card__wish" type="button" data-hc="wish" data-product-id="101" data-name="Arnica Montana" data-live-href="wishlist.php?id=101" aria-pressed="false" aria-label="Add Arnica Montana to wishlist"><svg class="hc-icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
+  <div class="hc-card__body">
+    <p class="hc-card__cat" data-slot="category.name">Dilution</p>
+    <h3 class="hc-card__name"><a href="product-details.html?slug=arnica-1" data-slot="product.name">Arnica Montana</a></h3>
+    <p class="hc-card__mfr">by <span data-slot="manufacturer.name">Dr. Reckeweg</span></p>
+    <!-- RATING SLOT (reserved, keep hidden until a reviews system exists): <div class="hc-card__rating" data-slot="product.rating" hidden></div> -->
+    <div class="hc-card__price hc-price" data-hc="discount" data-mrp="108" data-price="90">
+      <span class="hc-price__now"><!-- IF variant_count > 1 --><span class="hc-price__from">From</span><!-- END IF --><span class="hc-price__cur">&#8377;</span><span data-slot="variant.min_selling_price">90</span></span>
+      <!-- IF mrp > selling_price --><span class="hc-price__was"><span class="hc-price__mrp"><span class="hc-price__mrp-label">M.R.P: </span><s>&#8377;<span data-slot="variant.mrp">108</span></s></span> <span class="hc-price__off" data-off-wrap hidden>(<span data-off></span>)</span></span><!-- END IF -->
+    </div>
+    <p class="hc-card__ship"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-truck"/></svg><span class="hc-card__ship-text">Check delivery by PIN</span></p>
+    <!-- CTA: default "Choose Potency". Add class hc-card--quickadd on .hc-card for single-variant products to show "Add to Cart" instead. -->
+    <div class="hc-card__cta">
+      <a class="hc-btn hc-btn--accent hc-card__cta-choose" href="product-details.html?slug=arnica-1">Choose Potency</a>
+      <a class="hc-btn hc-btn--accent hc-card__cta-add" href="cart.html?action=add&amp;id=101" data-live-href="cart.php?action=add&amp;id=101" data-hc="quickadd" data-product-id="101"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-cart"/></svg>Add to Cart</a>
+    </div>
+  </div>
+</article></li>
+<li><article class="hc-card" data-product-id="102" data-slot="product.id">
+  <a class="hc-card__media" href="product-details.html?slug=chamomilla" tabindex="-1" aria-hidden="true"><img src="admin/uploads/products/1789018247_2688.png" alt="Chamomilla" width="400" height="400" loading="lazy" decoding="async" data-hc-fallback data-initial="C" data-slot="product.image"></a>
+  <div class="hc-card__badges">
+    <!-- IF discount >= threshold --><span class="hc-badge hc-badge--off" data-off-wrap hidden><span data-off></span></span><!-- END IF -->
+    <!-- IF is_new --><span class="hc-badge hc-badge--new">New</span><!-- END IF -->
+  </div>
+  <button class="hc-card__wish" type="button" data-hc="wish" data-product-id="102" data-name="Chamomilla" data-live-href="wishlist.php?id=102" aria-pressed="false" aria-label="Add Chamomilla to wishlist"><svg class="hc-icon" aria-hidden="true"><use href="#i-heart"/></svg></button>
+  <div class="hc-card__body">
+    <p class="hc-card__cat" data-slot="category.name">LM Potency</p>
+    <h3 class="hc-card__name"><a href="product-details.html?slug=chamomilla" data-slot="product.name">Chamomilla</a></h3>
+    <p class="hc-card__mfr">by <span data-slot="manufacturer.name">Indian</span></p>
+    <!-- RATING SLOT (reserved, keep hidden until a reviews system exists): <div class="hc-card__rating" data-slot="product.rating" hidden></div> -->
+    <div class="hc-card__price hc-price" data-hc="discount" data-mrp="100" data-price="99">
+      <span class="hc-price__now"><!-- IF variant_count > 1 --><span class="hc-price__from">From</span><!-- END IF --><span class="hc-price__cur">&#8377;</span><span data-slot="variant.min_selling_price">99</span></span>
+      <!-- IF mrp > selling_price --><span class="hc-price__was"><span class="hc-price__mrp"><span class="hc-price__mrp-label">M.R.P: </span><s>&#8377;<span data-slot="variant.mrp">100</span></s></span> <span class="hc-price__off" data-off-wrap hidden>(<span data-off></span>)</span></span><!-- END IF -->
+    </div>
+    <p class="hc-card__ship"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-truck"/></svg><span class="hc-card__ship-text">Check delivery by PIN</span></p>
+    
+    <div class="hc-card__cta">
+      <a class="hc-btn hc-btn--accent hc-card__cta-choose" href="product-details.html?slug=chamomilla">Choose Potency</a>
+      <a class="hc-btn hc-btn--accent hc-card__cta-add" href="cart.html?action=add&amp;id=102" data-live-href="cart.php?action=add&amp;id=102" data-hc="quickadd" data-product-id="102"><svg class="hc-icon hc-icon--sm" aria-hidden="true"><use href="#i-cart"/></svg>Add to Cart</a>
+    </div>
+  </div>
+</article></li>
+<!-- END LOOP -->
+      </ul>
+      <button class="hc-rail__btn hc-rail__btn--next" type="button" data-hc-next aria-label="Scroll right"><svg class="hc-icon" aria-hidden="true"><use href="#i-chev-right"/></svg></button>
+    </div>
+  </div>
+</section>
